@@ -62,7 +62,7 @@ resource "aws_security_group" "default" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["221.148.35.240/32"]
   }
 
   # HTTP access from the VPC
@@ -112,7 +112,7 @@ resource "aws_instance" "web" {
     # The connection will use the local SSH agent for authentication.
   }
 
-  instance_type = "t2.micro"
+  instance_type = "t2.large"
 
   # Lookup the correct AMI based on the region
   # we specified
