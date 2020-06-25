@@ -140,6 +140,7 @@ resource "aws_instance" "web" {
   #  ]
   #}
   user_data = <<-EOF
+              #!/bin/bash
               apt-get -y update
               apt-get -y install nginx
               service nginx start
